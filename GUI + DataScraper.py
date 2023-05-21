@@ -248,7 +248,7 @@ class App(customtkinter.CTk):
             
             
             
-        
+        #if input is not two words or the url link is not valid
         except IndexError or not self.validateInput():
             #blank textbox again
             self.output.configure(state = "normal")
