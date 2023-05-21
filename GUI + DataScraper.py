@@ -1,12 +1,14 @@
-import requests
+#import data scraping modules + verify the links scraped
 from bs4 import BeautifulSoup
 import validators
 
+#import GUI modules
 import customtkinter
 from PIL import Image
 
 
-#import modules to open urls
+#import modules to get and open urls
+import requests
 import webbrowser
 import urllib.request
 
