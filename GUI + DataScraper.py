@@ -150,6 +150,10 @@ class App(customtkinter.CTk):
     #validate the link (because input might not be formatted correctly)
     def validateInput(self):
         global playerLink, playerImageLink
+        
+        #first letter of second word, first five letters of second word, and first two letters of first name based on user input
+        #Example: Kobe Bryant --> /{b}/{bryanko}01.html
+
         playerLink = "www.basketball-reference.com/players/{}/{}01.html".format(playerNameForLink[1][0], playerNameForLink[1][0:5] + playerNameForLink[0][0:2])
         playerImageLink ="www.basketball-reference.com/req/202106291/images/headshots/{}01.jpg".format(playerNameForLink[1][0:5] + playerNameForLink[0][0:2])
         
@@ -230,10 +234,6 @@ class App(customtkinter.CTk):
     def getData(self, e):
         self.userInput(e)
         try:
-            #first letter of second word, first five letters of second word, and first two letters of first name based on user input
-            #Example: Kobe Bryant --> /{b}/{bryanko}01.html
-            
-            
             if self.validateInput():
                 pass
                 #BeautifulSoup retrieves/displays data ----------------------------------------------------------------------------------------
