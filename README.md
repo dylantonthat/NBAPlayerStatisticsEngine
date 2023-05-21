@@ -32,4 +32,4 @@ The remaining modules are part of Python's standard library, so they do not need
 
 ## Contributing
 
-You are welcome to download and play around with this app. Any kind of feedback is encouraged.
+You are welcome to download and play around with this app. Any feedback is encouraged.
