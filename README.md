@@ -18,7 +18,9 @@ pip install customtkinter
 
 3. Requests, Validators, urllib modules
 ```bash
-pip install requests, pip install validators, pip install urllib3
+pip install requests
+pip install validators
+pip install urllib3
 ```
 
 
