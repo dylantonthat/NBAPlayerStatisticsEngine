@@ -4,30 +4,35 @@ This desktop app allows the user to input an NBA player's name, an the engine wi
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install  .
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the BeautifulSoup data scraper.
 
 ```bash
-pip install foobar
+pip install beautifulsoup4
 ```
+
+In regards to the GUI, once again use [pip](https://pip.pypa.io/en/stable/) to install the CustomTkInter UI-Library.
+
+```bash
+pip install customtkinter
+```
+
+Additionally, the requests and urllib modules need to be installed with [pip](https://pip.pypa.io/en/stable/).
+```bash
+pip install requests
+```
+
+```bash
+pip install urllib3
+```
+
+The remaining modules are part of Python's standard library, so they do not need to be installed.
 
 ## Usage
 
-```python
-import foobar
+```
 
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
 ```
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+You are welcome to download and play around with this app. Any kind of feedback is encouraged.
