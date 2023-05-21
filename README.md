@@ -29,6 +29,6 @@ The remaining modules are part of Python's standard library, so they do not need
 ## Usage
 When the user enters a valid NBA player's name, the backend will scrap the data from BasketballReference.com for his career statistics as well as download and display an image of the player. Therefore, the image folder will contain .jpg files scraped from the html file.
 
-## Contributing
+## Contributions
 
-You are welcome to download and play around with this app. Any feedback is encouraged.
+I welcome users to download and play around with this app. Any feedback is encouraged.
