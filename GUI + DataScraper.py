@@ -1,6 +1,8 @@
-#import data scraping modules + verify the links scraped
+#import data scraping modules + verify the link
 from bs4 import BeautifulSoup
 import validators
+from validators import ValidationFailure
+
 
 #import GUI modules
 import customtkinter
@@ -10,7 +12,7 @@ from PIL import Image
 #import modules to get and open urls
 import requests
 import webbrowser
-import urllib.request
+import urllib
 
 
 
@@ -146,15 +148,20 @@ class App(customtkinter.CTk):
         
     
     #validate the link (because input might not be formatted correctly)
-    def validateInput(self, infoLink, pN):
-        validation = validators.url(infoLink, public = True)
-        if not validation:
-            return False
-        elif len(pN) != 2:
-            return False
+    def validateInput(self):
+        global playerLink, playerImageLink
+        playerLink = "www.basketball-reference.com/players/{}/{}01.html".format(playerNameForLink[1][0], playerNameForLink[1][0:5] + playerNameForLink[0][0:2])
+        playerImageLink ="www.basketball-reference.com/req/202106291/images/headshots/{}01.jpg".format(playerNameForLink[1][0:5] + playerNameForLink[0][0:2])
         
+        result = validators.url(playerLink)
+        result2 = validators.url(playerImageLink)
+
+        if not result or not result2:
+            return False
+
         return True
-                
+    
+
         
         
         
@@ -225,11 +232,9 @@ class App(customtkinter.CTk):
         try:
             #first letter of second word, first five letters of second word, and first two letters of first name based on user input
             #Example: Kobe Bryant --> /{b}/{bryanko}01.html
-            playerLink = "https://www.basketball-reference.com/players/{}/{}01.html".format(playerNameForLink[1][0], playerNameForLink[1][0:5] + playerNameForLink[0][0:2])
-            playerImageLink ="https://www.basketball-reference.com/req/202106291/images/headshots/{}01.jpg".format(playerNameForLink[1][0:5] + playerNameForLink[0][0:2])
             
             
-            if self.validateInput(playerLink, playerNameForLink):
+            if self.validateInput():
                 pass
                 #BeautifulSoup retrieves/displays data ----------------------------------------------------------------------------------------
                 self.retrievePlayerImage(playerImageLink)
@@ -243,11 +248,8 @@ class App(customtkinter.CTk):
             
             
             
-
-            #self.output.configure(state="disabled")
-
         
-        except IndexError or self.validateInput(playerLink, playerNameForLink) == False:
+        except IndexError or not self.validateInput():
             #blank textbox again
             self.output.configure(state = "normal")
             self.output.delete("0.0", "end")
@@ -256,7 +258,7 @@ class App(customtkinter.CTk):
             
             #blank image again
             self.playerImg = customtkinter.CTkImage(Image.open("images/background.png"), size = (200, 250))
-            playerImg = customtkinter.CTkLabel(master = self, text = "Player Image:", image = self.playerImg)
+            playerImg = customtkinter.CTkLabel(master = self, text = "Player Image Goes Here:", image = self.playerImg)
             playerImg.grid(row = 2, column = 1, rowspan = 1, columnspan = 2, padx = 10, pady = 5, sticky = "news")
 
 
