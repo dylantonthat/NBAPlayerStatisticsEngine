@@ -27,6 +27,7 @@ pip install urllib3
 The remaining modules are part of Python's standard library, so they do not need to be installed.
 
 ## Usage
+
 When the user enters a valid NBA player's name, the backend will scrap the data from BasketballReference.com for his career statistics as well as download and display an image of the player. Therefore, the image folder will contain .jpg files scraped from the html file.
 
 ## Contributions
