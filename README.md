@@ -1,6 +1,6 @@
 # NBA Player Statistics Engine
 
-This desktop app allows the user to input an NBA player's name, an the engine will return his picture and his career per-game statistics.
+This desktop app allows the user to input an NBA player's name, and the engine will return his picture and his career per-game statistics.
 
 ## Installation
 
@@ -28,7 +28,7 @@ The remaining modules are part of Python's standard library, so they do not need
 
 ## Usage
 
-When the user enters a valid NBA player's name, the backend will scrap the data from BasketballReference.com for his career statistics as well as download and display an image of the player. Therefore, the image folder will contain .jpg files scraped from the html file.
+When the user enters a valid NBA player's name, the backend will scrape the data from BasketballReference.com for his career statistics as well as download and display an image of the player. Therefore, the image folder will contain .jpg files scraped from the html file.
 
 ## Contributions
 
