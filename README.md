@@ -18,12 +18,9 @@ pip install customtkinter
 
 Additionally, the requests and urllib modules need to be installed with [pip](https://pip.pypa.io/en/stable/).
 ```bash
-pip install requests
+pip install requests, pip install urllib3
 ```
 
-```bash
-pip install urllib3
-```
 
 The remaining modules are part of Python's standard library, so they do not need to be installed.
 
