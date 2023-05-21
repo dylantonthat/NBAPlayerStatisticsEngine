@@ -4,19 +4,19 @@ This desktop app allows the user to input an NBA player's name, an the engine wi
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the BeautifulSoup data scraper.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install:
 
+BeautifulSoup data scraper
 ```bash
 pip install beautifulsoup4
 ```
 
-In regards to the GUI, once again use [pip](https://pip.pypa.io/en/stable/) to install the CustomTkInter UI-Library.
-
+CustomTkInter UI-Library
 ```bash
 pip install customtkinter
 ```
 
-Additionally, the requests and urllib modules need to be installed with [pip](https://pip.pypa.io/en/stable/).
+Requests, urllib modules
 ```bash
 pip install requests, pip install urllib3
 ```
