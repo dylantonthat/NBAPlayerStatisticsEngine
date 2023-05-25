@@ -154,8 +154,8 @@ class App(customtkinter.CTk):
         #first letter of second word, first five letters of second word, and first two letters of first name based on user input
         #Example: Kobe Bryant --> /{b}/{bryanko}01.html
 
-        playerLink = "www.basketball-reference.com/players/{}/{}01.html".format(playerNameForLink[1][0], playerNameForLink[1][0:5] + playerNameForLink[0][0:2])
-        playerImageLink ="www.basketball-reference.com/req/202106291/images/headshots/{}01.jpg".format(playerNameForLink[1][0:5] + playerNameForLink[0][0:2])
+        playerLink = "https://www.basketball-reference.com/players/{}/{}01.html".format(playerNameForLink[1][0], playerNameForLink[1][0:5] + playerNameForLink[0][0:2])
+        playerImageLink ="https://www.basketball-reference.com/req/202106291/images/headshots/{}01.jpg".format(playerNameForLink[1][0:5] + playerNameForLink[0][0:2])
         
         result = validators.url(playerLink)
         result2 = validators.url(playerImageLink)
