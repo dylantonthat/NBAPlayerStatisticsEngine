@@ -159,8 +159,10 @@ class App(customtkinter.CTk):
         
         result = validators.url(playerLink)
         result2 = validators.url(playerImageLink)
+        
+        
 
-        if not result or not result2:
+        if not result or not result2 or requests.get(playerLink).status_code == 404:
             return False
 
         return True
@@ -245,6 +247,11 @@ class App(customtkinter.CTk):
                 self.output.delete("0.0", "end")
                 self.output.insert("0.0","Invalid Name")
                 self.output.configure(state = "disabled")
+                
+                #blank image again
+                self.playerImg = customtkinter.CTkImage(Image.open("images/background.png"), size = (200, 250))
+                playerImg = customtkinter.CTkLabel(master = self, text = "Player Image Goes Here:", image = self.playerImg)
+                playerImg.grid(row = 2, column = 1, rowspan = 1, columnspan = 2, padx = 10, pady = 5, sticky = "news")
             
             
             
