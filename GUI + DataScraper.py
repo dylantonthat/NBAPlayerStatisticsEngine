@@ -254,7 +254,6 @@ class App(customtkinter.CTk):
                 playerImg.grid(row = 2, column = 1, rowspan = 1, columnspan = 2, padx = 10, pady = 5, sticky = "news")
             
             
-            
         #if input is not two words or the url link is not valid
         except IndexError or not self.validateInput():
             #blank textbox again
