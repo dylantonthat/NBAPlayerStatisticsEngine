@@ -109,7 +109,7 @@ class App(customtkinter.CTk):
         webbrowser.open("https://github.com/dylantonthat/NBAPlayerStatisticsEngine", new = 0, autoraise = True)
         
     #download image from Basketball Reference using urllib
-    def retrievePlayerImage(self, imageLink):
+    def downloadPlayerImage(self, imageLink):
         urllib.request.urlretrieve(imageLink, "images/" + playerNameForLink[1][0:5] + playerNameForLink[0][0:2] + ".jpg")
         imgData = requests.get(imageLink).content
         with open("images/" + playerNameForLink[1][0:5] + playerNameForLink[0][0:2] + ".jpg", 'wb') as handler:
@@ -159,18 +159,13 @@ class App(customtkinter.CTk):
         
         result = validators.url(playerLink)
         result2 = validators.url(playerImageLink)
-        
-        
-
+    
         if not result or not result2 or requests.get(playerLink).status_code == 404:
             return False
 
         return True
     
 
-        
-        
-        
         
     #obtain player data from Basketball Reference using BeautifulSoup
     def scrapWebsite(self, infoLink):
@@ -197,7 +192,7 @@ class App(customtkinter.CTk):
         self.output.configure(state='normal')
         self.output.delete("0.0", "end")
         
-        #if hyphen or single apostrophe
+        #configuring message, with exceptions for hyphens or apostrophes
         if (hyphenIndex > 0): #hyphen
             if (hyphenIndex < spaceIndex): #ex. Karl-Anthony Towns
                 self.output.insert("0.0", p[:hyphenIndex].capitalize() + "-" + p[hyphenIndex + 1:spaceIndex].capitalize() + " " + p[spaceIndex + 1:].capitalize() + " averages/ed:  \n\n" +
@@ -223,9 +218,7 @@ class App(customtkinter.CTk):
                            "{} points \n{} rebounds \n{} assists \nper game for his career."
                            .format(playerPoints, playerRebounds, playerAssists))
             
-        
         self.output.configure(state = 'disabled')
-        
         
         self.playerImg = customtkinter.CTkImage(Image.open("images/" + playerNameForLink[1][0:5] + playerNameForLink[0][0:2] + ".jpg"), size = (200, 250))
         playerImg = customtkinter.CTkLabel(master = self, text = " ", image = self.playerImg)
@@ -239,7 +232,7 @@ class App(customtkinter.CTk):
             if self.validateInput():
                 pass
                 #BeautifulSoup retrieves/displays data ----------------------------------------------------------------------------------------
-                self.retrievePlayerImage(playerImageLink)
+                self.downloadPlayerImage(playerImageLink)
                 self.scrapWebsite(playerLink)
                 
             else:
