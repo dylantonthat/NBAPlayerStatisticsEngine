@@ -4,7 +4,7 @@ This desktop app allows the user to input an NBA player's name, and the engine w
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install:
+In order to run this application locally, use the package manager [pip](https://pip.pypa.io/en/stable/) to install:
 
 1. BeautifulSoup data scraper
 ```bash
