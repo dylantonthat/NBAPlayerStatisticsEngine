@@ -28,7 +28,7 @@ The remaining modules are part of Python's standard library, so they do not need
 ## Images
 
 ### On Startup
-<img src="images/ProjectWhenIntialized.PNG" alt="drawing" style="width:500px;"/>
+<img src="images/ProjectWhenInitialized.PNG" alt="drawing" style="width:500px;"/>
 
 ### Ex. Kobe Bryant
 <img src="images/projectLinkedin.PNG" alt="drawing" style="width:500px;"/>
