@@ -22,6 +22,8 @@ pip install requests
 pip install validators
 pip install urllib3
 ```
+The remaining modules are part of Python's standard library, so they do not need to be installed.
+
 
 ## Images
 
@@ -32,7 +34,6 @@ pip install urllib3
 <img src="images/projectLinkedin.PNG" alt="drawing" style="width:500px;"/>
 
 
-The remaining modules are part of Python's standard library, so they do not need to be installed.
 
 ## Usage
 
