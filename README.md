@@ -24,6 +24,11 @@ pip install urllib3
 ```
 
 ## Images
+
+### On Startup
+<img src="images/projectWhenInitialized.PNG" alt="drawing" style="width:300px;"/>
+
+### Example
 <img src="images/projectLinkedin.PNG" alt="drawing" style="width:300px;"/>
 
 
