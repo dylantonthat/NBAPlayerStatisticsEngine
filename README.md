@@ -28,7 +28,7 @@ pip install urllib3
 ### On Startup
 <img src="images/ProjectWhenIntialized.PNG" alt="drawing" style="width:300px;"/>
 
-### Example
+### Ex. Kobe Bryant
 <img src="images/projectLinkedin.PNG" alt="drawing" style="width:300px;"/>
 
 
